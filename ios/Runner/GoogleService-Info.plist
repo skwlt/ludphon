@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>157368670712-mg3imbvb1btltk5qihf6no3nldsc7n53.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.157368670712-mg3imbvb1btltk5qihf6no3nldsc7n53</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDAgzm6jS15WUTPQmCzb4foojfnRSBwMPM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>157368670712</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ludphon.speechrec</string>
+	<key>PROJECT_ID</key>
+	<string>cs266-dfe5f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cs266-dfe5f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:157368670712:ios:cc209e7e94b787875a9e0d</string>
+</dict>
+</plist>
