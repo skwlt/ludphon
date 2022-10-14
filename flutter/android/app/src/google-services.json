@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "157368670712",
+    "project_id": "cs266-dfe5f",
+    "storage_bucket": "cs266-dfe5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157368670712:android:d3c86f976d83507f5a9e0d",
+        "android_client_info": {
+          "package_name": "com.ludphon.speechrec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157368670712-75avnbvvcv4sg2847n97l0als2par30n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ludphon.speechrec",
+            "certificate_hash": "e4ee3dbe74b0d66058937b46aced4caec2accacb"
+          }
+        },
+        {
+          "client_id": "157368670712-0bdv9qk2gq5556v87i0ljsc2vrpljkk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtTdgb6efTKnKkdFgxJEUoPvU2DhqS7Nc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157368670712-0bdv9qk2gq5556v87i0ljsc2vrpljkk1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "157368670712-mg3imbvb1btltk5qihf6no3nldsc7n53.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ludphon.speechrec"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
