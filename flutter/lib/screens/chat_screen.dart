@@ -93,6 +93,11 @@ class _ChatScreenState extends State<ChatScreen> {
     if (await record.hasPermission()) {
       var directory = await getApplicationSupportDirectory();
       var directoryPath = '${directory.path}/${count}.mp4';
+
+      final player = AudioPlayer();
+      var duration = await player.setAsset('assets/startTalk.mp3');
+      player.play();
+
       print(directoryPath);
       await record.start(
         path: directoryPath,
@@ -104,6 +109,10 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   void stopRecording() async {
+    final player = AudioPlayer();
+    var duration = await player.setAsset('assets/stop.mp3');
+    player.play();
+
     await record.stop();
 
     var directory = await getApplicationSupportDirectory();
@@ -123,6 +132,12 @@ class _ChatScreenState extends State<ChatScreen> {
     var url = 'http://127.0.0.1:3000/';
     var response = await dio.post(url, data: formData);
     // print(response.data);
+    var mes;
+    if (response.data['message'] == null) {
+      mes = ' ';
+    } else {
+      mes = response.data['message'];
+    }
 
     try {
       Reference reference = FirebaseStorage.instance.ref(recordedPath);
@@ -138,7 +153,8 @@ class _ChatScreenState extends State<ChatScreen> {
       print(downloadUrl);
 
       _firestore.collection('messages').add({
-        'message': response.data['message'],
+        // 'message': response.data['message'],
+        'message': mes,
         'url': downloadUrl,
         'sender': loggedInUser.email,
         'timestamp': Timestamp.now(),
