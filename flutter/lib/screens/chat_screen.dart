@@ -46,7 +46,6 @@ class _ChatScreenState extends State<ChatScreen> {
       final user = await _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
-        // print(loggedInUser.email);
       }
     } catch (e) {
       print(e);
@@ -129,8 +128,13 @@ class _ChatScreenState extends State<ChatScreen> {
         contentType: MediaType('audio', 'mpeg'),
       ),
     });
-    var url = 'http://127.0.0.1:3000/';
+    // var url = 'http://127.0.0.1:3000/';
+    // var url = 'http:10.0.2.2:3000/';
+    // var url = 'http://169.254.28.84:3000/';
+    // var url = 'http://192.168.1.2:3000';
+    var url = 'https://ludphon-python.herokuapp.com/';
     var response = await dio.post(url, data: formData);
+
     // print(response.data);
     var mes;
     if (response.data['message'] == null) {
@@ -171,7 +175,10 @@ class MessageStream extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: _firestore.collection('messages').orderBy('timestamp', descending: true).snapshots(),
+      stream: _firestore
+          .collection('messages')
+          .orderBy('timestamp', descending: true)
+          .snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           return Center(
@@ -228,7 +235,8 @@ class MessageBubble extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: Column(
-        crossAxisAlignment: isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+        crossAxisAlignment:
+            isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
           Text(
             sender,
@@ -273,6 +281,7 @@ class MessageBubble extends StatelessWidget {
   void playSound() async {
     print(url);
     final duration = await player.setUrl(url);
+    // player.setClip(start: Duration(seconds: 2));
     player.play();
   }
 }

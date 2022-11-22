@@ -5,6 +5,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:project/components/rounded_button.dart';
 
 class StartScreen extends StatefulWidget {
+  const StartScreen({Key? key}) : super(key: key);
   @override
   _StartScreenState createState() => _StartScreenState();
 }

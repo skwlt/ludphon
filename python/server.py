@@ -10,7 +10,11 @@ app = Flask(__name__)
 def postLongAudio():
     request_data = request.files['file']
     message = readFile(request_data)
-    return jsonify({ 'message': message })
+    # return jsonify({ 'message': message })
+    response = jsonify({ 'message': message })
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    response.headers.add("Access-Control-Allow-Credentials", "true")
+    return response
 
 @app.route('/appAudio', methods=['POST'])
 def postShortAudio():
@@ -18,4 +22,4 @@ def postShortAudio():
     message = appAudio(request_data)
     return jsonify({ 'message': message })
 
-app.run(port=3000)
+app.run(debug=True, host='0.0.0.0', port=3000)

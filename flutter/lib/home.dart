@@ -28,7 +28,11 @@ class _HomeState extends State<Home> {
             width: 200,
             height: 100,
           ),
-          FloatingActionButton.large(backgroundColor: Colors.redAccent, onPressed: () {}, child: Icon(Icons.mic, size: 35, color: Colors.white))
+          FloatingActionButton.large(
+            backgroundColor: Colors.redAccent,
+            onPressed: () {},
+            child: Icon(Icons.mic, size: 35, color: Colors.white),
+          ),
         ],
       )),
     );
